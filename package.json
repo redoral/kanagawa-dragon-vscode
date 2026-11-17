@@ -1,9 +1,10 @@
 {
   "name": "kanagawa-dragon",
   "displayName": "Kanagawa Dragon",
-  "description": "Kanagawa Dragon theme for VS Code — a faithful port of the 'dragon' variant of kanagawa.nvim, for those late-night sessions. Rich TextMate + semantic (LSP) token coverage.",
+  "description": "A faithful VS Code port of the \"dragon\" variant of kanagawa.nvim — the palette for those late-night sessions. Full TextMate + LSP semantic token coverage.",
   "version": "0.1.0",
-  "publisher": "kanagawa-dragon",
+  "publisher": "redoral",
+  "icon": "icon.png",
   "license": "MIT",
   "keywords": [
     "theme",
@@ -34,9 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-name/kanagawa-dragon-vscode"
+    "url": "https://github.com/redoral/kanagawa-dragon-vscode"
   },
   "bugs": {
-    "url": "https://github.com/your-name/kanagawa-dragon-vscode/issues"
+    "url": "https://github.com/redoral/kanagawa-dragon-vscode/issues"
   }
 }

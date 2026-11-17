@@ -1,0 +1,5 @@
+.vscode/**
+.vscode-test/**
+icon.jpg
+samples/**
+node_modules/**

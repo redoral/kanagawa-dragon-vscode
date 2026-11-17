@@ -4,6 +4,18 @@ A faithful VS Code port of the **dragon** variant of [kanagawa.nvim](https://git
 
 All colors are taken directly from the kanagawa.nvim source (`lua/kanagawa/colors.lua` and `lua/kanagawa/themes.lua`), not sampled from screenshots.
 
+**This port favors the muted side of the Dragon palette.** Rather than using the stock vivid accents (samuraiRed, roninYellow, autumnYellow, springBlue...), it consistently swaps them for their softer Dragon counterparts (`dragonRed`, `dragonOrange`, `dragonYellow`, `dragonBlue2`...) across diagnostics, git decorations, links, and the terminal — the whole theme stays in the same low-saturation register as the syntax colors.
+
+## Screenshots
+
+| TypeScript | Python |
+| --- | --- |
+| ![TypeScript](screenshots/typescript.png) | ![Python](screenshots/python.png) |
+
+| Rust | Command palette |
+| --- | --- |
+| ![Rust](screenshots/rust.png) | ![Command palette](screenshots/menu.png) |
+
 ## Installation
 
 ### From this repo (VSIX)
@@ -58,13 +70,14 @@ Semantic tokens only kick in when a language server is running (tsserver, Pylanc
 - Cursor line: `dragonBlack5` (matches Neovim `CursorLine = ui.bg_p2`)
 - Gutter (line-number bar) matches the editor background (`#181616`) — the equivalent of kanagawa's `ui.bg_gutter = "none"` customization. Set it to `"#282727"` (`dragonBlack4`) if you want the stock Neovim look.
 - Selection/search: `waveBlue1/2`, same as Neovim popups and search
-- Diff: `winterGreen/Red/Blue/Yellow` backgrounds, `autumn*` gutter/git decorations
-- Diagnostics: `samuraiRed` / `roninYellow` / `dragonBlue` / `waveAqua1`
-- Terminal ANSI: the 16 dragon terminal colors from `themes.lua`
+- Diff: `winterGreen/Red/Blue/Yellow` backgrounds, `autumnRed` (deleted) and `dragonYellow` (modified) git decorations
+- Diagnostics: `dragonRed` / `dragonOrange` / `dragonBlue` / `waveAqua1` (muted swaps for the stock `samuraiRed` / `roninYellow`)
+- Terminal ANSI: the 16 dragon terminal colors from `themes.lua`, with the bright slots muted to match the normal ones
 - Suggest/quick-pick widgets: `waveBlue1/2` popup palette (Neovim `Pmenu`)
 
 ## Small intentional deviations
 
+- **Muted accent palette**: instead of the stock diagnostics colors `samuraiRed` (`#E82424`) and `roninYellow` (`#FF9E3B`), this port uses `dragonRed` (`#c4746e`) and `dragonOrange` (`#b6927b`). Similarly, git modified uses `dragonYellow` (`#c4b28a`) instead of `autumnYellow` (`#DCA561`), links use `dragonBlue2` (`#8ba4b0`) instead of `springBlue` (`#7FB4CA`), and the terminal's bright ANSI slots mirror the normal slots (instead of the stock vivid brights `waveRed`, `carpYellow`, `springBlue`...), so every bright color in the theme is the softer Dragon counterpart.
 - **Neutral UI text, dragon accents**: syntax highlighting stays 100% authentic kanagawa Dragon. VS Code UI text is neutralized: primary text everywhere is `dragonWhite` (`#c5c9c5`); secondary UI text (title bar, tabs, descriptions, hover cards) uses `dragonGray` (`#a6a69c`) — a darker white from the same palette — instead of kanagawa's warm cream `oldWhite`; the active line number is `dragonWhite` instead of `roninYellow`. `dragonYellow` (`#c4b28a`) is kept as the accent color for icons and the status bar (bottom bar) text and badges — including all activity-bar icons (files, search, git, extensions, ...): bright yellow for the active icon, dimmed yellow (`#c4b28a99`) for inactive ones. The side rail uses the classic `activityBar.*` keys; with `workbench.activityBar.location: "top"` (Modern UI), the active/hover icons come from the **`modernTab.*`** family, since activity bar items share the pane tab presentation there (see [microsoft/vscode#326126](https://github.com/microsoft/vscode/issues/326126) for related modern-UI theme quirks).
 - `editorInlayHint.foreground` uses `dragonGray3` (#7a8382) instead of `dragonBlack6` for readability (kanagawa leaves inlay hints to the Neovim default).
 - `editor.lineHighlightBorder` and bracket-match backgrounds are fully transparent since VS Code draws these differently from Vim.
@@ -72,6 +85,12 @@ Semantic tokens only kick in when a language server is running (tsserver, Pylanc
 ## Verification
 
 Open a file from [`samples/`](samples/) and run **Developer: Inspect Editor Tokens and Scopes** to check which rule paints a token.
+
+## Credits
+
+This theme is a port of the **dragon** variant of [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) — an elegant, dark Neovim colorscheme by [Tommaso (rebelot)](https://github.com/rebelot).
+
+All colors are taken directly from the kanagawa.nvim source. If you enjoy this theme, please go star the original project!
 
 ## License
 
