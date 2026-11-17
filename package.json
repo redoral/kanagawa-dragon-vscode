@@ -1,5 +1,5 @@
 {
-  "name": "kanagawa-dragon",
+  "name": "kanagawa-dragon-theme",
   "displayName": "Kanagawa Dragon Theme",
   "description": "A dark, muted VS Code port of the \"dragon\" variant of kanagawa.nvim by rebelot.",
   "version": "0.1.0",
@@ -12,6 +12,7 @@
     "dark theme",
     "kanagawa",
     "dragon",
+    "kanagawa dragon",
     "neovim"
   ],
   "categories": [

@@ -28,7 +28,7 @@ A dark, muted port of the **dragon** variant of [kanagawa.nvim](https://github.c
 Search for **Kanagawa Dragon Theme** in the VS Code Extensions view and hit install, or if you are on the repository:
 
 ```bash
-code --install-extension kanagawa-dragon-0.1.0.vsix
+code --install-extension kanagawa-dragon-theme-0.1.0.vsix
 ```
 
 Then `Ctrl+K Ctrl+T` → select **Kanagawa Dragon Theme**.
