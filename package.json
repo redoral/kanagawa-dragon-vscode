@@ -1,7 +1,7 @@
 {
   "name": "kanagawa-dragon",
-  "displayName": "Kanagawa Dragon",
-  "description": "A faithful VS Code port of the \"dragon\" variant of kanagawa.nvim — the palette for those late-night sessions. Full TextMate + LSP semantic token coverage.",
+  "displayName": "Kanagawa Dragon Theme",
+  "description": "A dark, muted VS Code port of the \"dragon\" variant of kanagawa.nvim by rebelot.",
   "version": "0.1.0",
   "publisher": "redoral",
   "icon": "icon.png",
@@ -23,7 +23,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "Kanagawa Dragon",
+        "label": "Kanagawa Dragon Theme",
         "uiTheme": "vs-dark",
         "path": "./themes/kanagawa-dragon-color-theme.json"
       }
