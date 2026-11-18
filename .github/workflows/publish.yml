@@ -1,0 +1,40 @@
+# Publishes the extension to the Visual Studio Marketplace using Trusted Publishing (OIDC).
+# No Personal Access Token required — see https://aka.ms/vsm/trustedpublishing
+#
+# One-time setup (Marketplace UI):
+#   1. Sign in at https://marketplace.visualstudio.com/manage
+#   2. Open the "redoral" publisher → Trusted Publishing → Create
+#   3. Repository owner: redoral
+#      Repository:        kanagawa-dragon-vscode
+#      Workflow:          publish.yml
+#      Environment:       (leave empty)
+#
+# Publish: push a tag like "v0.1.0", or run the workflow manually from the Actions tab.
+
+name: Publish to VS Code Marketplace
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Package extension
+        run: npx @vscode/vsce package --allow-missing-repository
+
+      - name: Publish extension
+        run: npx @vscode/vsce publish --oidc
