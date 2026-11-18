@@ -21,7 +21,7 @@ A dark, muted port of the **dragon** variant of [kanagawa.nvim](https://github.c
 
 ### Command palette
 
-![Command palette](screenshots/menu.png)
+![Command palette](screenshots/command_palette.png)
 
 ## Installation
 
