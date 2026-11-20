@@ -3,18 +3,18 @@
 Text with **bold**, *italic*, ***both***, ~~strike~~, and `inline code` (green italic).
 Links: [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) render teal, underlined.
 
-- list markers are muted punctuation
+- list markers: plain white punctuation
 - [x] checked boxes
 
-> Block quotes use parameter gray.
+> Block quotes render dragonWhite (#c5c9c5).
 
 ```python
 def fenced_code(): return "green italic strings"
 ```
 
-| Tables | Work |
-| ------ | ---- |
-| keys   | yellow |
+| Tables    | Render      |
+| --------- | ----------- |
+| cell text | plain white |
 
 <!-- comments stay ash italic -->
-TODO: fixme markers
+TODO/FIXME: plain text — no special color without an extension

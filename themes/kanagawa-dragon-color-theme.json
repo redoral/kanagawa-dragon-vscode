@@ -154,7 +154,7 @@
 
     "activityBar.background": "#12120f",
     "activityBar.foreground": "#c4b28a",
-    "activityBar.inactiveForeground": "#c4b28a99",
+    "activityBar.inactiveForeground": "#7a8382",
     "activityBar.activeFocusBorder": "#c4b28a",
     "activityBar.border": "#0d0c0c00",
     "activityBar.activeBorder": "#c4b28a",
