@@ -5,6 +5,8 @@ A dark, muted port of the **dragon** variant of [kanagawa.nvim](https://github.c
 - Original colorscheme: [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) by [rebelot](https://github.com/rebelot)
 - This port: [redoral/kanagawa-dragon-vscode](https://github.com/redoral/kanagawa-dragon-vscode)
 
+_Still a work-in-progress, there are some things left to iron out, fix, and cleanup which I am planning to do in the next few weeks._
+
 ## Screenshots
 
 ### TypeScript

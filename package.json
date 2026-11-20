@@ -2,7 +2,7 @@
   "name": "kanagawa-dragon-theme",
   "displayName": "Kanagawa Dragon Theme",
   "description": "A dark, muted VS Code port of the \"dragon\" variant of kanagawa.nvim by rebelot.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "redoral",
   "icon": "icon.png",
   "license": "MIT",
